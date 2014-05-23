@@ -1,0 +1,12 @@
+  <script>
+    app = angular.module('APP', ['uiSlider']);
+    app.controller('ItemCtrl', ['$scope', function($scope) {
+    $scope.cost = 350
+    }]);
+    </script>
+ <div ng-app="AAP"> 
+<div style="width:600px;" ng-controller="ItemCtrl">
+  <slider floor="100" ceiling="1000" step="50" precision="2" ng-model="cost"></slider>
+</div>
+  </div>   
+  

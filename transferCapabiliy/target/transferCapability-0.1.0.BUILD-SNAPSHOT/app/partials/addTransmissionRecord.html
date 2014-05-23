@@ -1,0 +1,204 @@
+<!-- <script type="text/javascript">
+    /* $('#form_datetime').datetimepicker({
+        //language:  'fr',
+        weekStart: 1,
+        todayBtn:  1,
+        autoclose: 1,
+        todayHighlight: 1,
+        startView: 2,
+        forceParse: 0,
+        showMeridian: 0
+    }); */
+    $('.form_date').datetimepicker({
+        //language:  'fr',
+        weekStart: 0,
+        todayBtn:  1,
+        autoclose: 1,
+        todayHighlight: 1,
+        startView: 2,
+        minView: 2,
+        forceParse: 1
+    });
+    $('.form_time').datetimepicker({
+        language:  'fr',
+        weekStart: 1,
+        todayBtn:  1,
+        autoclose: 1,
+        todayHighlight: 1,
+        startView: 1,
+        minView: 0,
+        maxView: 1,
+        forceParse:1,
+        minuteStep:2,
+        showMeridian:'true'
+       
+    });
+</script> -->
+<script type="text/javascript">
+                            $(function () {
+                                $('#dtp1').datetimepicker({pickTime: false});
+                                $('#dtp2').datetimepicker({pickTime: false});
+                                $("#dtp1").on("dp.change",function (e) {
+                                   $('#dtp2').data("DateTimePicker").setMinDate(e.date);
+                                });
+                                $("#dtp2").on("dp.change",function (e) {
+                                   $('#dtp1').data("DateTimePicker").setMaxDate(e.date);
+                                });
+                            });
+                        </script>
+<form class="form-horizontal">
+	<fieldset>
+
+		<!-- Form Name -->
+		<legend><center>Feed New Transmission Record</center></legend>
+         <!-- Date Time Picker -->
+         
+		<!-- Select Basic -->
+		<div class="form-group">
+			<label class="col-md-4 control-label" for="corridorName">Select
+				Corridor</label>
+			<div class="col-md-4">
+				<div class="input-group">
+					<span class="input-group-addon"><i class="glyphicon glyphicon-chevron-right"></i></span>
+				<select id="corridorName" name="corridorName" ng-model="rec.corridorName" ng-options="corridorName.corridorName+' (TTC -- '+corridorName.ttc+')'  for corridorName in corridorsList" class="form-control">
+					<option value="">----Select Corridor----</option>
+					
+				</select>
+				</div>
+			</div>
+		</div>
+
+		<!-- Prepended text-->
+		
+		<div class="form-group">
+			<label class="col-md-4 control-label" for="startDate">From
+				(Starting Date)</label>
+			<div class="col-md-4">
+				<div id="dtp1"  class="input-group date form_date" data-date="" data-date-format="DD-MMM-YYYY" data-link-field="sDate">
+					<span class="input-group-addon"><i class="glyphicon glyphicon-chevron-right"></i></span> 
+					<input  id="startDate" ng-model="rec.startDate" name="startDate" class="form-control" placeholder="Click to Select Starting Date"
+						type="text" required readonly>
+					<span class="input-group-addon"><span class="glyphicon glyphicon-calendar"></span></span>
+						
+                    <!-- <span class="input-group-addon"><span class="glyphicon glyphicon-calendar"></span></span> -->
+				</div>
+
+			</div>
+			<input type="hidden" id="sDate"  value="" /><br/>
+		</div>
+        
+		<!-- Prepended text
+		<div class="form-group">
+            <label class="col-md-4 control-label" for="startTime">Starting Time</label>
+            <div class="col-md-4">
+                <div  class="input-group date form_time" data-date="" data-date-format="HH:ii P" data-link-field="sTime" data-link-format="HH:ii P">
+                    <span class="input-group-addon"><i class="glyphicon glyphicon-chevron-right"></i></span> 
+                    <input id="startTime"
+                        name="startTime" class="form-control" placeholder="Starting Time"
+                        type="text" required readonly>
+                        <span class="input-group-addon"><span class="glyphicon glyphicon-remove"></span></span>
+                    <span class="input-group-addon"><span class="glyphicon glyphicon-time"></span></span>
+                </div>
+
+            </div>
+            <input type="hidden" id="sTime" value="" /><br/>
+        </div>  -->
+
+		<!-- Prepended text-->
+        <div class="form-group">
+            <label class="col-md-4 control-label" for="endDate">To
+                (Ending Date)</label>
+            <div class="col-md-4">
+                <div  id="dtp2" class="input-group date form_date" data-date="" data-date-format="DD-MMM-YYYY" data-link-field="eDate">
+                    <span class="input-group-addon"><i class="glyphicon glyphicon-chevron-right"></i></span> 
+                    <input id="endDate" ng-model="rec.endDate"
+                        name="endDate" class="form-control" placeholder="Click to Select Ending Date"
+                        type="text" required readonly>
+                        <span class="input-group-addon"><span class="glyphicon glyphicon-calendar"></span></span>
+                    <!-- <span class="input-group-addon"><span class="glyphicon glyphicon-calendar"></span></span> -->
+                </div>
+
+            </div>
+            <input type="hidden" id="eDate" value="" /><br/>
+        </div>
+        
+        <!-- Prepended text
+        <div class="form-group">
+            <label class="col-md-4 control-label" for="endTime">Ending Time</label>
+            <div class="col-md-4">
+                <div  class="input-group date form_time" data-date="" data-date-format="HH:ii P" data-link-field="eTime" data-link-format="HH:ii P">
+                    <span class="input-group-addon"><i class="glyphicon glyphicon-chevron-right"></i></span> 
+                    <input id="endTime"
+                        name="endTime" class="form-control" placeholder="Ending Time"
+                        type="text" required readonly>
+                        <span class="input-group-addon"><span class="glyphicon glyphicon-remove"></span></span>
+                    <span class="input-group-addon"><span class="glyphicon glyphicon-time"></span></span>
+                </div>
+
+            </div>
+            <input type="hidden" id="eTime" value="" /><br/>
+        </div>   -->
+        
+		<!-- Prepended text-->
+		<div class="form-group">
+			<label class="col-md-4 control-label" for="atc">Actual
+				Transmission (ATC)</label>
+			<div class="col-md-4">
+				<div class="input-group">
+					<span class="input-group-addon"><i class="glyphicon glyphicon-chevron-right"></i></span> 
+					<input id="atc" name="atc" ng-model="rec.atc"
+						class="form-control" placeholder="Actual Transmission" type="text"
+						required="">
+				</div>
+
+			</div>
+		</div>
+
+		<!-- Prepended text-->
+		<div class="form-group">
+			<label class="col-md-4 control-label" for="revision">Revison
+				(#)</label>
+			<div class="col-md-4">
+				<div class="input-group">
+					<span class="input-group-addon"><i class="glyphicon glyphicon-chevron-right"></i></span> 
+					<input id="revision" ng-model="rec.revision"
+						name="revision" class="form-control" placeholder="Revision"
+						type="text" pattern="^[0-9]">
+				</div>
+
+			</div>
+		</div>
+
+		<!-- Prepended text-->
+		<div class="form-group">
+			<label class="col-md-4 control-label" for="comment">Comment
+				(If Any)</label>
+			<div class="col-md-4">
+				<div class="input-group">
+					<span class="input-group-addon"><i class="glyphicon glyphicon-chevron-right"></i></span> 
+					<input id="comment" ng-model="rec.comment"
+						name="comment" class="form-control" placeholder="Comment"
+						type="text">
+				</div>
+
+			</div>
+		</div>
+		<!-- Button (Double) -->
+		<div class="form-group">
+					<label class="col-md-4 control-label" for="addBtn"></label>
+			<div class="col-md-8">
+				<button style="width: 24%" id="addBtn" name="addBtn"
+					class="btn btn-info" ng-click="feedTransmission()">
+					<i class="glyphicon glyphicon-plus"></i> Add
+				</button>
+				<button type="button" class="btn btn-outline btn-info ">Info</button>
+				<a class="btn btn-social-icon btn-facebook"><i class="fa fa-facebook"></i></a>
+				<button style="width: 23%" id="clearBtn" name="clearBtn"
+					class="btn btn-danger">
+					<i class="glyphicon glyphicon-remove"></i> Cancel
+				</button>
+			</div>
+		</div>
+	</fieldset>
+</form>
+

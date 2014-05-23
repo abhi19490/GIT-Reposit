@@ -1,0 +1,37 @@
+<aspectj>
+<aspects>
+<aspect name="com.fiftyhertz.domain.CorridorMaster_Roo_Jpa_ActiveRecord"/>
+<aspect name="com.fiftyhertz.domain.StateMaster_Roo_JavaBean"/>
+<aspect name="com.fiftyhertz.domain.CorridorMaster_Roo_Json"/>
+<aspect name="com.fiftyhertz.domain.TransferMaster_Roo_JavaBean"/>
+<aspect name="com.fiftyhertz.domain.TransferMaster_Roo_Configurable"/>
+<aspect name="com.fiftyhertz.web.ApplicationConversionServiceFactoryBean_Roo_ConversionService"/>
+<aspect name="com.fiftyhertz.TransferMasterController_Roo_Controller"/>
+<aspect name="com.fiftyhertz.domain.CorridorMaster_Roo_ToString"/>
+<aspect name="com.fiftyhertz.domain.TransferMaster_Roo_Jpa_ActiveRecord"/>
+<aspect name="com.fiftyhertz.domain.RegionMaster_Roo_Configurable"/>
+<aspect name="com.fiftyhertz.domain.RegionMaster_Roo_JavaBean"/>
+<aspect name="com.fiftyhertz.domain.RegionMaster_Roo_Jpa_Entity"/>
+<aspect name="com.fiftyhertz.domain.CorridorMaster_Roo_Configurable"/>
+<aspect name="com.fiftyhertz.domain.StateMaster_Roo_Json"/>
+<aspect name="com.fiftyhertz.domain.CorridorMaster_Roo_JavaBean"/>
+<aspect name="com.fiftyhertz.domain.TransferMaster_Roo_Json"/>
+<aspect name="com.fiftyhertz.domain.RegionMaster_Roo_ToString"/>
+<aspect name="com.fiftyhertz.domain.StateMaster_Roo_Jpa_Entity"/>
+<aspect name="com.fiftyhertz.domain.RegionMaster_Roo_Jpa_ActiveRecord"/>
+<aspect name="com.fiftyhertz.RegionMasterController_Roo_Controller"/>
+<aspect name="com.fiftyhertz.RegionMasterController_Roo_Controller_Json"/>
+<aspect name="com.fiftyhertz.domain.TransferMaster_Roo_Jpa_Entity"/>
+<aspect name="com.fiftyhertz.domain.RegionMaster_Roo_Json"/>
+<aspect name="com.fiftyhertz.domain.StateMaster_Roo_ToString"/>
+<aspect name="com.fiftyhertz.CorridorMasterController_Roo_Controller_Json"/>
+<aspect name="com.fiftyhertz.domain.StateMaster_Roo_Configurable"/>
+<aspect name="com.fiftyhertz.StateMasterController_Roo_Controller"/>
+<aspect name="com.fiftyhertz.domain.TransferMaster_Roo_ToString"/>
+<aspect name="com.fiftyhertz.domain.StateMaster_Roo_Jpa_ActiveRecord"/>
+<aspect name="com.fiftyhertz.domain.CorridorMaster_Roo_Jpa_Entity"/>
+<aspect name="com.fiftyhertz.CorridorMasterController_Roo_Controller"/>
+<aspect name="com.fiftyhertz.TransferMasterController_Roo_Controller_Finder"/>
+</aspects>
+</aspectj>
+
